@@ -11,7 +11,7 @@ Installation of this module uses composer. For composer documentation, please re
 [getcomposer.org](http://getcomposer.org/).
 
 ```sh
-$ composer require kenkataiwa/doctrine-fixture-module
+$ composer require kenkataiwa/doctrine-fixtures-module
 ```
 
 Then open `config/application.config.php` and add `DoctrineModule`, `DoctrineORMModule` and 
@@ -39,5 +39,5 @@ Access the Doctrine command line as following
 
 #### Load
 ```sh
-./vendor/bin/doctrine-module fixtures:import 
+./vendor/bin/doctrine-module fixtures:load 
 ```
