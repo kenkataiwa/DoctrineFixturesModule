@@ -19,9 +19,10 @@
 
 namespace DoctrineFixturesModule\Command;
 
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Question\ConfirmationQuestion;
+use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 use Doctrine\ORM\Tools\SchemaTool;
@@ -92,11 +93,12 @@ EOT
     {
         $em = $this->em;
 
-        if ($input->isInteractive() && !$input->getOption('append')) {
-            $dialog = $this->getHelperSet()->get('dialog');
-            if (!$dialog->askConfirmation($output, '<question>Careful, database will be purged. Do you want to continue Y/N ?</question>', false)) {
-                return;
-            }
+
+        $helper = $this->getHelper('question');
+        $question = new ConfirmationQuestion('Careful, database will be purged. Do you want to continue Y/N?', false);
+
+        if (!$helper->ask($input, $output, $question)) {
+            return;
         }
 
         $dirOrFile = $input->getOption('fixtures');
