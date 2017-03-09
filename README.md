@@ -1,9 +1,13 @@
-# Doctrine Fixtures Module for Zend Framework 2
+# Doctrine Fixtures Module for Zend Framework
+[![Build Status](https://travis-ci.org/kenkataiwa/DoctrineFixturesModule.png)](https://travis-ci.org/kenkataiwa/DoctrineFixturesModule)
+[![Code Coverage](https://scrutinizer-ci.com/g/kenkataiwa/DoctrineFixturesModule/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/kenkataiwa/DoctrineFixturesModule/)
+[![Latest Stable Version](https://poser.pugx.org/kenkataiwa/doctrine-fixtures-module/v/stable.png)](https://packagist.org/packages/kenkataiwa/doctrine-fixtures-module)
+[![Latest Unstable Version](https://poser.pugx.org/kenkataiwa/doctrine-fixtures-module/v/unstable.png)](https://packagist.org/packages/kenkataiwa/doctrine-fixtures-module)
 
 ## Introduction
 
 This module integrates the [Doctrine Data Fixtures library](https://github.com/doctrine/data-fixtures).
-into Zend Framework 2 so that you can load data fixtures programmatically into the Doctrine ORM or ODM.
+into Zend Framework so that you can load data fixtures programmatically into the Doctrine ORM or ODM.
 
 ## Installation
 
