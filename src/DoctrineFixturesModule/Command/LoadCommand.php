@@ -93,12 +93,15 @@ EOT
     {
         $em = $this->em;
 
+        if (!$input->getOption('no-interaction')) {
+            $helper = $this->getHelper('question');
+            $question
+                = new ConfirmationQuestion('Careful, database will be purged. Do you want to continue Y/N?',
+                false);
 
-        $helper = $this->getHelper('question');
-        $question = new ConfirmationQuestion('Careful, database will be purged. Do you want to continue Y/N?', false);
-
-        if (!$helper->ask($input, $output, $question)) {
-            return;
+            if (!$helper->ask($input, $output, $question)) {
+                return;
+            }
         }
 
         $dirOrFile = $input->getOption('fixtures');
