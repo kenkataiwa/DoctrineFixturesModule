@@ -26,7 +26,7 @@
     "zendframework/zend-mvc":            "^2.7.10 || ^3.0.1",
     "zendframework/zend-servicemanager": "^2.7.6 || ^3.1",
     "doctrine/data-fixtures":            "^1",
-    "doctrine/doctrine-orm-module":      "^1"
+    "doctrine/doctrine-orm-module":      ">=1"
   },
   "require-dev": {
     "doctrine/doctrine-fixtures-bundle": "dev-master"
